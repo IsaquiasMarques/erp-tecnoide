@@ -1,0 +1,4 @@
+a.active{
+    background-color: rgb(77, 74, 234, 0.1);
+    color: var(--primary);
+}
