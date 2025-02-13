@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
-import { AuthComponent } from './templates/auth/auth.component';
-import { AccountComponent } from './templates/account/account.component';
-import { AdminComponent } from './templates/admin/admin.component';
+import { AdminComponent } from '@templates/admin/admin.component';
+import { AuthComponent } from '@templates/auth/auth.component';
 
 export const routes: Routes = [
     {

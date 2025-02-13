@@ -1,1 +1,30 @@
-<p>colaborators works!</p>
+<div class="content-wrapper flex flex-col gap-10">
+    <div class="panel-header flex flex-col gap-y-8">
+        <div class="panel-title flex justify-between items-center">
+            <h1 class=" text-xl font-medium text-gray-400">Funcionários</h1>
+        </div>
+        <div class="widgets flex flex-wrap gap-6 justify-start items-strecth">
+            <app-widget class="w-[calc(calc(100%/4)-18px)]">
+                <div class="" ngProjectAs="widget-header">
+                    <h3 class="text-green-500">Funcionários activos</h3>
+                </div>
+                <div ngProjectAs="widget-body">
+                    <h1 class="font-extrabold text-4xl text-black/70">{{ 232342 | number | replace }}</h1>
+                </div>
+            </app-widget>
+            <app-widget class="w-[calc(calc(100%/4)-18px)]">
+                <div class="" ngProjectAs="widget-header">
+                    <h3 class="text-red-500">Funcionários inactivos</h3>
+                </div>
+                <div ngProjectAs="widget-body">
+                    <h1 class="font-extrabold text-4xl text-black/70">{{ 232342 | number | replace }}</h1>
+                </div>
+            </app-widget>
+        </div>
+    </div>
+
+    <div class="page-children-content">
+        <router-outlet />
+    </div>
+
+</div>

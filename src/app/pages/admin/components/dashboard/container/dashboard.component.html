@@ -1,1 +1,385 @@
-<p>dashboard works!</p>
+<div class="content-wrapper flex flex-col gap-10">
+    <div class="panel-header flex flex-col gap-y-8">
+        <div class="panel-title flex justify-between items-center">
+            <h1 class=" text-xl font-medium text-gray-400">Dashboard</h1>
+        </div>
+        <div class="widgets flex flex-wrap gap-6 justify-start items-strecth">
+            <app-widget class="w-[calc(calc(100%/4)-18px)]">
+                <div class="" ngProjectAs="widget-header">
+                    <h3 class="text-(color:--primary)">Total de funcionários</h3>
+                </div>
+                <div ngProjectAs="widget-body">
+                    <h1 class="font-extrabold text-4xl text-black/70">{{ 232342 | number | replace }}</h1>
+                </div>
+            </app-widget>
+            <app-widget class="w-[calc(calc(100%/4)-18px)]">
+                <div class="" ngProjectAs="widget-header">
+                    <h3 class="text-(color:--primary)">Total de pacientes</h3>
+                </div>
+                <div ngProjectAs="widget-body">
+                    <h1 class="font-extrabold text-4xl text-black/70">{{ 232342 | number | replace }}</h1>
+                </div>
+            </app-widget>
+            <app-widget class="w-[calc(calc(100%/4)-18px)]">
+                <div class="" ngProjectAs="widget-header">
+                    <h3 class="text-(color:--primary)">Total de departamentos</h3>
+                </div>
+                <div ngProjectAs="widget-body">
+                    <h1 class="font-extrabold text-4xl text-black/70">{{ 232342 | number | replace }}</h1>
+                </div>
+            </app-widget>
+            <app-widget class="w-[calc(calc(100%/4)-18px)]">
+                <div class="" ngProjectAs="widget-header">
+                    <h3 class="text-(color:--primary)">Total de departamentos</h3>
+                </div>
+                <div ngProjectAs="widget-body">
+                    <h1 class="font-extrabold text-4xl text-black/70">{{ 232342 | number | replace }}</h1>
+                </div>
+            </app-widget>
+        </div>
+    </div>
+
+    <div class="filters-section flex justify-between items-start">
+        <div class="left"></div>
+        <div class="form">
+            <form class="max-w-md mx-auto flex gap-x-3 items-start">
+
+                <div class="search w-full">
+                    <div class="relative">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                            </svg>
+                        </div>
+                        <input type="search" id="default-search" class="block w-full p-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 outline-none"
+                        placeholder="Pesquise aqui..." required />
+                    </div>
+                </div>
+                <select id="countries" class="bg-gray-50 block p-3 border outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    <option selected>Choose a country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                </select>
+                <div class="submit h-6">
+                    <button class="bg-(color:--primary) rounded-lg p-2.5 cursor-pointer flex gap-1 text-white font-medium justify-center items-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.65811 19.7806L9.97433 20.7293H9.97433L9.65811 19.7806ZM14.6581 18.114L14.9743 19.0627L14.9743 19.0626L14.6581 18.114ZM19.7071 7.29289L20.4142 8L19.7071 7.29289ZM15.2929 11.7071L14.5858 11L15.2929 11.7071ZM5 5H19V3H5V5ZM5 6.58579V5H3V6.58579H5ZM9.41421 11L5 6.58579L3.58579 8L7.99999 12.4142L9.41421 11ZM7.99999 12.4142V19.3063H9.99999V12.4142H7.99999ZM7.99999 19.3063C7.99999 20.3301 9.00304 21.0531 9.97433 20.7293L9.34188 18.832C9.66565 18.724 9.99999 18.965 9.99999 19.3063H7.99999ZM9.97433 20.7293L14.9743 19.0627L14.3419 17.1653L9.34188 18.832L9.97433 20.7293ZM14.9743 19.0626C15.5868 18.8585 16 18.2853 16 17.6396H14C14 17.4244 14.1377 17.2333 14.3419 17.1653L14.9743 19.0626ZM16 17.6396V12.4142H14V17.6396H16ZM19 6.58579L14.5858 11L16 12.4142L20.4142 8L19 6.58579ZM19 5V6.58579H21V5H19ZM20.4142 8C20.7893 7.62493 21 7.11622 21 6.58579H19L20.4142 8ZM16 12.4142V12.4142L14.5858 11C14.2107 11.3751 14 11.8838 14 12.4142H16ZM7.99999 12.4142H9.99999C9.99999 11.8838 9.78928 11.3751 9.41421 11L7.99999 12.4142ZM3 6.58579C3 7.11622 3.21071 7.62493 3.58579 8L5 6.58579V6.58579H3ZM19 5H21C21 3.89543 20.1046 3 19 3V5ZM5 3C3.89543 3 3 3.89543 3 5H5V5V3Z" fill="#ffffff"/>
+                        </svg>
+                        Filtrar
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <div class="table">
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Product name
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Color
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Category
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Accessories
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Available
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Price
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Weight
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            Apple MacBook Pro 17"
+                        </th>
+                        <td class="px-6 py-4">
+                            Silver
+                        </td>
+                        <td class="px-6 py-4">
+                            Laptop
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            $2999
+                        </td>
+                        <td class="px-6 py-4">
+                            3.0 lb.
+                        </td>
+                        <td class="flex items-center px-6 py-4">
+                            <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
+                            <a href="#" class="font-medium text-red-600 hover:underline ms-3">Remove</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            Microsoft Surface Pro
+                        </th>
+                        <td class="px-6 py-4">
+                            White
+                        </td>
+                        <td class="px-6 py-4">
+                            Laptop PC
+                        </td>
+                        <td class="px-6 py-4">
+                            No
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            $1999
+                        </td>
+                        <td class="px-6 py-4">
+                            1.0 lb.
+                        </td>
+                        <td class="flex items-center px-6 py-4">
+                            <a href="#" class="font-medium text-blue-600">Edit</a>
+                            <a href="#" class="font-medium text-red-600 hover:underline ms-3">Remove</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            Magic Mouse 2
+                        </th>
+                        <td class="px-6 py-4">
+                            Black
+                        </td>
+                        <td class="px-6 py-4">
+                            Accessories
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            No
+                        </td>
+                        <td class="px-6 py-4">
+                            $99
+                        </td>
+                        <td class="px-6 py-4">
+                            0.2 lb.
+                        </td>
+                        <td class="flex items-center px-6 py-4">
+                            <a href="#" class="font-medium text-blue-600">Edit</a>
+                            <a href="#" class="font-medium text-red-600 hover:underline ms-3">Remove</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            Apple Watch
+                        </th>
+                        <td class="px-6 py-4">
+                            Black
+                        </td>
+                        <td class="px-6 py-4">
+                            Watches
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            No
+                        </td>
+                        <td class="px-6 py-4">
+                            $199
+                        </td>
+                        <td class="px-6 py-4">
+                            0.12 lb.
+                        </td>
+                        <td class="flex items-center px-6 py-4">
+                            <a href="#" class="font-medium text-blue-600">Edit</a>
+                            <a href="#" class="font-medium text-red-600 hover:underline ms-3">Remove</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            Apple iMac
+                        </th>
+                        <td class="px-6 py-4">
+                            Silver
+                        </td>
+                        <td class="px-6 py-4">
+                            PC
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            $2999
+                        </td>
+                        <td class="px-6 py-4">
+                            7.0 lb.
+                        </td>
+                        <td class="flex items-center px-6 py-4">
+                            <a href="#" class="font-medium text-blue-600">Edit</a>
+                            <a href="#" class="font-medium text-red-600 hover:underline ms-3">Remove</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            Apple AirPods
+                        </th>
+                        <td class="px-6 py-4">
+                            White
+                        </td>
+                        <td class="px-6 py-4">
+                            Accessories
+                        </td>
+                        <td class="px-6 py-4">
+                            No
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            $399
+                        </td>
+                        <td class="px-6 py-4">
+                            38 g
+                        </td>
+                        <td class="flex items-center px-6 py-4">
+                            <a href="#" class="font-medium text-blue-600">Edit</a>
+                            <a href="#" class="font-medium text-red-600 hover:underline ms-3">Remove</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            iPad Pro
+                        </th>
+                        <td class="px-6 py-4">
+                            Gold
+                        </td>
+                        <td class="px-6 py-4">
+                            Tablet
+                        </td>
+                        <td class="px-6 py-4">
+                            No
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            $699
+                        </td>
+                        <td class="px-6 py-4">
+                            1.3 lb.
+                        </td>
+                        <td class="flex items-center px-6 py-4">
+                            <a href="#" class="font-medium text-blue-600">Edit</a>
+                            <a href="#" class="font-medium text-red-600 hover:underline ms-3">Remove</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            Magic Keyboard
+                        </th>
+                        <td class="px-6 py-4">
+                            Black
+                        </td>
+                        <td class="px-6 py-4">
+                            Accessories
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            $99
+                        </td>
+                        <td class="px-6 py-4">
+                            453 g
+                        </td>
+                        <td class="flex items-center px-6 py-4">
+                            <a href="#" class="font-medium text-blue-600">Edit</a>
+                            <a href="#" class="font-medium text-red-600 hover:underline ms-3">Remove</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            Apple TV 4K
+                        </th>
+                        <td class="px-6 py-4">
+                            Black
+                        </td>
+                        <td class="px-6 py-4">
+                            TV
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            No
+                        </td>
+                        <td class="px-6 py-4">
+                            $179
+                        </td>
+                        <td class="px-6 py-4">
+                            1.78 lb.
+                        </td>
+                        <td class="flex items-center px-6 py-4">
+                            <a href="#" class="font-medium text-blue-600">Edit</a>
+                            <a href="#" class="font-medium text-red-600 hover:underline ms-3">Remove</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            AirTag
+                        </th>
+                        <td class="px-6 py-4">
+                            Silver
+                        </td>
+                        <td class="px-6 py-4">
+                            Accessories
+                        </td>
+                        <td class="px-6 py-4">
+                            Yes
+                        </td>
+                        <td class="px-6 py-4">
+                            No
+                        </td>
+                        <td class="px-6 py-4">
+                            $29
+                        </td>
+                        <td class="px-6 py-4">
+                            53 g
+                        </td>
+                        <td class="flex items-center px-6 py-4">
+                            <a href="#" class="font-medium text-blue-600">Edit</a>
+                            <a href="#" class="font-medium text-red-600 hover:underline ms-3">Remove</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

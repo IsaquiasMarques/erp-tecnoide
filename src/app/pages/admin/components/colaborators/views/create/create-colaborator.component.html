@@ -1,1 +1,74 @@
-<p>create-colaborator works!</p>
+<div class="child-content-container flex flex-col gap-y-10">
+    <div class="filters-section flex justify-between items-stretch">
+        <div class="description">
+            <h1 class="text-xl font-bold text-black/80 mb-2"> Adicionar funcionário</h1>
+            <p class="text-gray-400 text-sm">Adicione um funcionário aos seus registros</p>
+        </div>
+        <div class="action">
+            <button [routerLink]="['/admin/colaborators/index']" class="bg-(color:--primary) rounded-lg p-3 cursor-pointer flex gap-1 text-white font-medium justify-center items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 7H13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M5 12H11" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M5 17H9" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M19 18L22 15M19 18L16 15M19 18L19 6" stroke="#ffffff" stroke-width="2"/>
+                </svg>
+                Listar os funcionários
+            </button>
+        </div>
+    </div>
+    <div class="form-container w-full">
+        <form class="flex flex-col gap-y-5">
+            <div class="form-row flex gap-5">
+                <div class="email w-full">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5" placeholder="name@flowbite.com" required />
+                </div>
+                <div class="password w-full">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Your password</label>
+                    <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5" required />
+                </div>
+            </div>
+            <div class="form-row flex gap-5">
+                <div class="email w-full">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5" placeholder="name@flowbite.com" required />
+                </div>
+                <div class="select w-full">
+                    <label for="countries" class="block mb-2 text-sm font-medium text-gray-900">Your password</label>
+                    <select id="countries" class="bg-gray-50 w-full block p-3 border outline-none border-gray-300 text-gray-900 text-sm rounded-lg">
+                        <option selected>Choose a country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="filesd">
+                    <label class="block mb-2 text-sm font-medium text-gray-900" for="file_input">Upload file</label>
+                    <input class="block w-full p-3 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" id="file_input" type="file">
+                </div>
+            </div>
+            <div class="form-row flex gap-5">
+                <div class="email w-full">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5" placeholder="name@flowbite.com" required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class=".checkbox flex items-start w-w-full">
+                    <div class="flex items-center h-5">
+                        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300" required />
+                    </div>
+                    <label for="remember" class="ms-2 text-sm font-medium text-gray-900">Remember me</label>
+                </div>
+            </div>
+            <div class="form-row flex justify-end">
+                <button type="submit" class="text-white duration-[.6s] cursor-pointer bg-(color:--primary)/80 hover:bg-(color:--primary) focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-3 text-center">
+                    Cadastrar funcionário
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
