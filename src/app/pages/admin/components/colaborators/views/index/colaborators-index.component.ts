@@ -10,4 +10,10 @@ import { PaginationComponent } from '@shared/ui/pagination/pagination.component'
 })
 export class ColaboratorsIndexComponent {
 
+  delete(id: number | string): void{
+    if(confirm("Deseja realmente eliminar este item?")){
+      window.alert("deleted!");
+    }
+  }
+
 }

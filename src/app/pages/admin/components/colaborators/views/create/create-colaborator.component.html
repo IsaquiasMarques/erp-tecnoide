@@ -17,11 +17,19 @@
         </div>
     </div>
     <div class="form-container w-full">
-        <form class="flex flex-col gap-y-5">
+        <form
+        [formGroup]="this.createColaboratorFormGroup"
+        class="flex flex-col gap-y-5">
             <div class="form-row flex gap-5">
                 <div class="email w-full">
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5" placeholder="name@flowbite.com" required />
+                    <input type="email" formControlName="email" id="email"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none block w-full p-2.5"
+                    [ngClass]="{
+                        '!border-red-400': this.createColaboratorFormGroup.get('email')?.invalid && this.createColaboratorFormGroup.get('email')?.touched
+                    }"
+                    placeholder="name@flowbite.com"
+                    required />
                 </div>
                 <div class="password w-full">
                     <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Your password</label>
@@ -65,7 +73,7 @@
                 </div>
             </div>
             <div class="form-row flex justify-end">
-                <button type="submit" class="text-white duration-[.6s] cursor-pointer bg-(color:--primary)/80 hover:bg-(color:--primary) focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-3 text-center">
+                <button type="submit" [disabled]="this.createColaboratorFormGroup.invalid" class="text-white duration-[.6s] cursor-pointer disabled:cursor-auto disabled:bg-(color:--primary)/60 bg-(color:--primary)/90 hover:bg-(color:--primary) focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-3 text-center">
                     Cadastrar funcionário
                 </button>
             </div>
